@@ -1,0 +1,162 @@
+/* Transparent PNG — GitHub Pages (store). Matches extension dark theme. */
+:root {
+  color-scheme: dark;
+  --bg: #0f0f10;
+  --surface: #1a1a1d;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #3b82f6;
+  --max: 640px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.updated {
+  margin: 0 0 24px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 32px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--muted);
+}
+
+.compliance {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.form-frame {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.form-placeholder {
+  padding: 24px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.form-placeholder code {
+  color: var(--text);
+  font-size: 0.8125rem;
+}
+
+/* Welcome onboarding — light layout (CWS homepage) */
+body.page-welcome {
+  color-scheme: light;
+  background: #fff;
+  color: #111;
+}
+
+body.page-welcome main {
+  max-width: 900px;
+  padding: 48px 24px 64px;
+  text-align: center;
+}
+
+body.page-welcome h1 {
+  margin: 0 0 40px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.welcome-step {
+  margin-bottom: 40px;
+}
+
+.welcome-step:last-child {
+  margin-bottom: 0;
+}
+
+.welcome-step__text {
+  margin: 0 0 20px;
+  font-size: 1.26rem;
+  line-height: 1.5;
+}
+
+.welcome-step img {
+  display: block;
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  margin: 0 auto;
+}
