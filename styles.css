@@ -60,6 +60,20 @@ h2 {
   margin-bottom: 20px;
 }
 
+.card-highlight {
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+.notice {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.notice-success {
+  color: #86efac;
+}
+
 ul {
   margin: 0;
   padding-left: 1.25rem;

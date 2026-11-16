@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    CWS — privacy.html:
+    1. Last updated — sync with substantive edits.
+    2. §8 Contact — Promoseptika@gmail.com (match CWS developer contact).
+    3. §7 welcome URL must match live GitHub Pages and extension (when wired).
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Transparent PNG</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Privacy Policy — Transparent PNG</h1>
+      <p class="lead">
+        Cut out image subjects and make backgrounds transparent in a Chrome side panel — Capture
+        element or Upload image, processed on your device.
+      </p>
+      <p class="updated">Last updated: November 16, 2026</p>
+
+      <div class="card card-highlight">
+        <p>
+          <strong>Summary.</strong>
+          Your pictures, processing jobs, and outputs are handled
+          <strong>on your computer</strong> by the extension. We do not run a cloud matting service,
+          do not sell your data, and do not use it for advertising. Page access and image fetching
+          happen only when <strong>you</strong> start Capture or Upload — not as silent background
+          monitoring.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>1. Information We Collect</h2>
+        <p>To provide background removal and export, the extension may handle:</p>
+        <ul>
+          <li>
+            <strong>Images you process</strong> — pixels from a file you upload (PNG, JPEG, or WebP)
+            or from a page element you select with Capture element.
+          </li>
+          <li>
+            <strong>Processing state</strong> — in-progress job metadata, session flags for the side
+            panel (for example picker or panel UI state), and short-lived buffers in extension
+            memory or IndexedDB while a job runs or until you clear it.
+          </li>
+          <li>
+            <strong>Local UI preferences</strong> — small values in Chrome extension storage (for
+            example whether an onboarding hint was dismissed).
+          </li>
+          <li>
+            <strong>Web page access (user-initiated only)</strong> — when you open the side panel,
+            run Capture element, or use related actions, the extension may read the active tab,
+            inject the picker overlay, and fetch image bytes from URLs on that page
+            <strong>only for that action</strong> to build your cutout.
+          </li>
+          <li>
+            <strong>Exports you trigger</strong> — when you tap Done, the extension may write
+            <code>transparent.png</code> (or a uniquified name) to your Downloads folder and copy PNG
+            data to the clipboard using Chrome’s download and clipboard APIs.
+          </li>
+        </ul>
+        <p class="notice">
+          We do <strong>not</strong> receive your images on developer-operated servers. The bundled
+          segmentation model (<strong>ONNX</strong>, shipped inside the extension package) runs locally
+          via WebGPU or WASM in the panel.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>2. How We Use Your Information</h2>
+        <p>Information is used only to operate features you request:</p>
+        <ul>
+          <li>Show the side panel, progress, and Done export.</li>
+          <li>Run local flat-background cleanup or on-device ML matting for your image.</li>
+          <li>Resolve Capture targets (for example grid tiles or image URLs) when you pick an element.</li>
+          <li>Enforce product rules (for example blocked stock hosts or system pages) with in-panel errors.</li>
+        </ul>
+        <p>
+          We do <strong>not</strong> use your data for advertising, interest-based profiling, or
+          marketing analytics.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>3. Data Storage, Security &amp; Network</h2>
+
+        <p><strong>On your device</strong></p>
+        <p>
+          Job buffers, pending uploads, and recent results may be stored in
+          <strong>extension memory</strong>, <strong>IndexedDB</strong>, or
+          <strong>chrome.storage</strong> (local or session) on your device. Uninstalling the
+          extension removes extension storage; files you already saved to Downloads or elsewhere remain
+          until <strong>you</strong> delete them.
+        </p>
+        <p>
+          The extension package includes model weights and <strong>ONNX Runtime Web</strong> libraries
+          loaded from the extension bundle — not from a developer-controlled inference API.
+        </p>
+
+        <p><strong>Side panel (sidePanel)</strong></p>
+        <p>
+          The side panel is the main UI for Capture, Upload, processing, and Done. It runs as part of
+          the extension, not as a remote website inside the panel.
+        </p>
+
+        <p><strong>Capture &amp; host access (host_permissions)</strong></p>
+        <p>
+          Broad host permission is required because user content can appear on many sites. The
+          extension does <strong>not</strong> monitor browsing in the background. Access is tied to
+          <strong>your</strong> use of Capture, the picker, and related fetches while a job is active,
+          as described on the Chrome Web Store listing and in the panel.
+        </p>
+
+        <p><strong>Third-party sites (not the developer)</strong></p>
+        <p>
+          During Capture, your browser may request images from the website you are viewing (for example
+          a CDN). Those requests go between your browser and that site under their policies — we do not
+          proxy your images through our servers.
+        </p>
+
+        <p><strong>HTTPS documentation</strong></p>
+        <p>
+          Opening this privacy or welcome page uses a normal HTTPS request to GitHub Pages (static
+          text only; no image upload).
+        </p>
+
+        <p class="notice notice-success">
+          We do not operate a backend that stores your pictures. If our data practices change after
+          release, we will update this policy and the store listing before the change takes effect.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>4. Limited Use Disclosure</h2>
+        <p>
+          Use of information received through Chrome extension APIs follows the
+          <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/"
+            >Chrome Web Store User Data Policy</a
+          >
+          (including Limited Use requirements and collection limited to what is
+          <strong>necessary</strong> for the extension’s disclosed single purpose):
+        </p>
+        <ul>
+          <li>
+            <strong>Allowed use</strong> — only to provide or improve transparent-background cutout,
+            Capture, Upload, and Done export (the extension’s single purpose).
+          </li>
+          <li>
+            <strong>Allowed transfer</strong> — we do not transfer your images to third parties for
+            processing. Limited exceptions: legal requirements, security abuse investigations, or as part
+            of a merger or sale with prior user notice where required.
+          </li>
+          <li>
+            <strong>Prohibited advertising</strong> — we do not use or transfer user data for
+            personalized or interest-based ads.
+          </li>
+          <li>
+            <strong>Prohibited human reading</strong> — we do not routinely read your image content.
+            Limited exceptions: your explicit support request, security investigation, or legal
+            obligation.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>5. Third-Party Sharing</h2>
+        <p>We do not sell your personal data. Limited involvement of third parties:</p>
+        <ul>
+          <li>
+            <strong>GitHub Pages</strong> — hosts this welcome and privacy documentation (static pages;
+            the extension does not send your images to GitHub).
+          </li>
+          <li>
+            <strong>Websites you capture</strong> — when you use Capture, image hosts you already visit may
+            serve bytes to your browser; that is outside our control and not a transfer to us.
+          </li>
+        </ul>
+        <p>
+          We do not use advertising networks, analytics SDKs, or tracking pixels in the extension UI.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>6. Your Rights: Access &amp; Deletion</h2>
+        <ul>
+          <li>
+            <strong>Access</strong> — your output is shown in the panel and saved where you choose (Done
+            → Downloads / clipboard).
+          </li>
+          <li>
+            <strong>Deletion</strong> — close or reset the panel job, clear browser data for the
+            extension, or uninstall the extension to remove local extension storage. Delete exported files
+            on disk separately.
+          </li>
+          <li>
+            <strong>Opt-out of web capture</strong> — use Upload image only with files from your disk;
+            do not use Capture element.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>7. Welcome Page (First Install)</h2>
+        <p>
+          When configured in a release, the extension may open our welcome page in a new tab on first
+          installation:
+        </p>
+        <p>
+          <code
+            >https://promoseptika-sudo.github.io/transparent-png-pages/welcome.html</code
+          >
+        </p>
+        <p>
+          This page is informational only. The extension does not attach your image data to that
+          request. No tracking identifiers are added beyond a normal browser page load.
+        </p>
+      </div>
+
+      <div class="card" id="permissions">
+        <h2>8. Permissions Reference</h2>
+        <ul>
+          <li><strong>activeTab</strong> — access the tab where you start Capture.</li>
+          <li><strong>tabs</strong> — find the website tab for capture and panel coordination.</li>
+          <li><strong>scripting</strong> — inject the picker when you start Capture.</li>
+          <li><strong>storage</strong> — save small local UI and session state.</li>
+          <li><strong>sidePanel</strong> — main Capture / Upload / Done UI.</li>
+          <li><strong>clipboardWrite</strong> — copy the processed PNG when you use Done.</li>
+          <li><strong>downloads</strong> — save the processed PNG when you use Done.</li>
+          <li><strong>offscreen</strong> — clipboard helper document when needed for copy.</li>
+          <li><strong>webNavigation</strong> — coordinate picker lifecycle with navigation events.</li>
+          <li>
+            <strong>host_permissions (http/https)</strong> — user-initiated Capture and content scripts
+            for the picker on pages you use; not for background site surveillance.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>9. Contact Us</h2>
+        <p>
+          For privacy questions or support, email
+          <a href="mailto:Promoseptika@gmail.com">Promoseptika@gmail.com</a>.
+          Use the same address as the developer contact on the Chrome Web Store listing for Transparent
+          PNG.
+        </p>
+      </div>
+
+      <div class="compliance">
+        <p>
+          <strong>Chrome Web Store compliance.</strong>
+          Transparent PNG follows the Chrome Web Store User Data Policy, including Limited Use.
+          Image processing runs locally; we do not sell data or use it for ad targeting. Browsing and
+          image access are tied to Capture and Upload features described on the store listing and in the
+          panel.
+        </p>
+      </div>
+
+      <footer>
+        <a href="welcome.html">Welcome</a>
+      </footer>
+    </main>
+  </body>
+</html>
